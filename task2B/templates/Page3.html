@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page3</title>
+</head>
+<body>
+<h1>User {{user.first_name}} logged in</h1>
+<form action="{% url 'logout' %}">
+    {% csrf_token %}
+<input type="submit" value="Logout">
+</form>
+</body>
+</html>

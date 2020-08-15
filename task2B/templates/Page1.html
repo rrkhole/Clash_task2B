@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page1</title>
+</head>
+<body>
+<h1>Signup Page</h1>
+{% for message in messages %}
+    <h3> {{message}} </h3>
+    {% endfor %}
+<form method="post">
+    {% csrf_token %}
+    Username:
+    <input type="text" name="uname"><br>
+    Email:
+    <input type="text" name="email"><br>
+    First Name:
+    <input type="text" name="fname"><br>
+    Last Name:
+    <input type="text" name="lname"><br>
+    Phone Number:
+    <input type="number" name="ph_no"><br>
+    Password:
+    <input type="password" name="password1"><br>
+    Confirm Password:
+    <input type="password" name="password2">
+    <input type="submit">
+</form>
+<a href="{% url 'page2' %}">Already User? Login from here</a>
+
+</body>
+</html>
